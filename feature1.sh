@@ -2,7 +2,7 @@
 
 echo "A companhia teve $1: "
 
-# Verificar atraso criando nova cluna que diminuiu horario de partida de horário previsto de partida
+# Verificar atraso criando nova coluna que diminuiu horario de partida de horário previsto de partida
 awk -F ',' '{ print $0 "," $5 - $6 }' 2006-sample.csv |
 # Deixar apenas colunas de interesse (Companhia e tempo de atraso)
 cut -d"," -f9,30 |
